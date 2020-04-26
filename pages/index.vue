@@ -41,18 +41,19 @@
       <div class="extra">
         <div class="extra__box">
           <h2>Education</h2>
-          <h3>{{ education.name }}</h3>
-          <p>
-            <strong>{{ education.course }}</strong>
-          </p>
-          <p class="period">{{ education.period }}</p>
+          <base-education
+            v-for="item in education"
+            :key="item.name"
+            v-bind="item"
+          />
         </div>
         <div class="extra__box">
           <h2>Languages</h2>
-          <p v-for="language in languages" :key="language.name">
-            <strong>{{ language.name }}</strong>
-            - {{ language.level }}
-          </p>
+          <base-language
+            v-for="language in languages"
+            :key="language.name"
+            v-bind="language"
+          />
         </div>
       </div>
     </div>
@@ -68,10 +69,14 @@ import {
 } from '@/content/resume.yaml'
 
 import BaseProfile from '@/components/BaseProfile'
+import BaseEducation from '@/components/BaseEducation'
+import BaseLanguage from '@/components/BaseLanguage'
 
 export default {
   components: {
-    BaseProfile
+    BaseProfile,
+    BaseEducation,
+    BaseLanguage
   },
   data() {
     return {
@@ -120,6 +125,10 @@ export default {
 
   h2 {
     margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
   }
 }
 

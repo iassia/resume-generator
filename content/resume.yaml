@@ -5,9 +5,9 @@ profile:
   github: username
   email: johndoe@gmail.com
 education:
-  name: Lorem Ipsum
-  course: Lorem Ipsum is simply dummy text of the printing
-  period: Jan 2007 – Dez 2009
+  - name: Lorem Ipsum
+    course: Lorem Ipsum is simply dummy text of the printing
+    period: Jan 2007 – Dez 2009
 languages:
   - name: English
     level: Fluent
