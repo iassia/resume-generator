@@ -8,17 +8,17 @@
         class="experience"
         v-bind="experience"
       />
-      <div class="extra">
-        <div class="extra__box">
-          <h2>Education</h2>
+      <div class="info">
+        <div class="info__box">
+          <h2 class="info__title">Education</h2>
           <base-education
             v-for="item in education"
             :key="item.name"
             v-bind="item"
           />
         </div>
-        <div class="extra__box">
-          <h2>Languages</h2>
+        <div class="info__box">
+          <h2 class="info__title">Languages</h2>
           <base-language
             v-for="language in languages"
             :key="language.name"
@@ -68,7 +68,7 @@ export default {
   }
 }
 
-.extra {
+.info {
   padding-top: 4rem;
   margin-top: 4rem;
   border-top: $light-gray 1px solid;
@@ -80,12 +80,8 @@ export default {
     padding-right: 60px;
   }
 
-  h2 {
+  &__title {
     margin-bottom: 1rem;
-  }
-
-  p {
-    margin-bottom: 0.5rem;
   }
 }
 </style>
