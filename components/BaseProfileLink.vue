@@ -50,7 +50,6 @@ export default {
     color: $main-color;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     padding: 1rem 1rem 1rem 0;
     margin-right: 1rem;
 
