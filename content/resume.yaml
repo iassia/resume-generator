@@ -1,0 +1,37 @@
+profile:
+  name: John Doe
+  title: Front-end Developer
+  phone: 999999
+  github: username
+  email: johndoe@gmail.com
+education:
+  name: Lorem Ipsum
+  course: Lorem Ipsum is simply dummy text of the printing
+  period: Jan 2007 – Dez 2009
+languages:
+  - name: English
+    level: Fluent
+  - name: Portuguese
+    level: Native
+experiences:
+  - company: Acme
+    roles:
+      - title: Senior Developer
+        type: Remote
+        period: Mar 2019 – Present
+        description: Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        tags: DevOps, Vue.js, Nuxt
+      - title: Developer
+        type: Remote
+        period: Mar 2017 – Mar 2019
+        total: 2 yrs
+        description: Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        tags: React, React Native
+  - company: The Company
+    roles:
+      - title: Intern
+        type: Remote
+        period: Mar 2014 – Mar 2017
+        total: 3 yrs
+        description: Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        tags: Angular.js, HTML, CSS
