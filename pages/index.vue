@@ -1,27 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <div class="profile">
-        <h1 class="profile__title">{{ profile.name }}</h1>
-        <p class="profile__role">{{ profile.title }}</p>
-        <a class="profile__link" :href="`mailto:${profile.email}`">
-          <i class="fa fa-envelope-o"></i>
-          {{ profile.email }}
-        </a>
-        <a class="profile__link" :href="`tel:${profile.phone}`">
-          <i class="fa fa-mobile-phone"></i>
-          +{{ profile.phone }}
-        </a>
-        <a
-          class="profile__link"
-          :href="`https://github.com/${profile.github}`"
-          target="_blank"
-        >
-          <i class="fa fa-github"></i>
-          github.com/{{ profile.github }}
-        </a>
-      </div>
-
+      <base-profile v-bind="profile" />
       <div
         v-for="experience in experiences"
         :key="experience.company"
@@ -87,7 +67,12 @@ import {
   languages
 } from '@/content/resume.yaml'
 
+import BaseProfile from '@/components/BaseProfile'
+
 export default {
+  components: {
+    BaseProfile
+  },
   data() {
     return {
       profile,
@@ -118,33 +103,6 @@ export default {
     display: inline-block;
     margin: 2px 4px 0 0;
     font-size: 0.8rem;
-  }
-}
-
-.profile {
-  &__link {
-    text-decoration: none;
-    color: $main-color;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1rem 1rem 0;
-    margin-right: 1rem;
-
-    .fa {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border-radius: 10px;
-      text-align: center;
-      line-height: 20px;
-      margin-right: 5px;
-      background-color: $light-gray;
-    }
-  }
-
-  &__role {
-    text-transform: uppercase;
   }
 }
 
