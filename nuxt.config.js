@@ -1,5 +1,9 @@
 export default {
+  target: 'static',
   mode: 'spa',
+  server: {
+    host: '0.0.0.0'
+  },
   /*
    ** Headers of the page
    */
@@ -52,6 +56,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: ['@nuxtjs/style-resources'],
+
   styleResources: {
     scss: ['assets/scss/main.scss']
   },
@@ -59,6 +64,11 @@ export default {
    ** Build configuration
    */
   build: {
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ]
+    },
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.ya?ml$/,
